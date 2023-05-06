@@ -5,11 +5,7 @@ Este micro projeto tem como objetivo implementar o desafio do ciclo de palavras,
 provas e processos seletivos. Ele tem como proposta servir de "corretor", de modo que a pessoa consiga
 criar os próprios desafios, os resolva por conta própria e utilize o programa para uma correção do mesmo.
 
-<<<<<<< HEAD
 <a href="https://www.youtube.com/watch?v=75MdLJI2_g8" target="_blank">Clique aqui para acessar um exemplo de um problema do ciclo de palavras.</a> 
-=======
-<a href="https://www.youtube.com/watch?v=75MdLJI2_g8" target="_blank">Clique aqui para acessas um exemplo de um problema do ciclo de palavras.</a> 
->>>>>>> d4486ca (fix: update README.md, opening example link in another tab)
 
 ## O que é o problema do Ciclo de Palavras (by ChatGPT)
 
