@@ -6,7 +6,7 @@ public class Cycles {
 
     public static void main(String[] args) {
 
-        char continuationIndicator;
+        char continuation;
         Scanner scanner;
         String cycleWord;
         final String SECRET_SPOCK_STRING = "LIVELONGANDPROSPER";
@@ -23,7 +23,7 @@ public class Cycles {
             lastPosition = scanner.nextInt();
             drawLine();
 
-            getAnswerIndicator(scanner);
+            getAnswer(scanner);
 
             int wordLenght = cycleWord.length();
             System.out.println("O tamanho da palavra é: " + wordLenght);
@@ -38,9 +38,9 @@ public class Cycles {
                     + cycleWord + " é " + cycleWord.charAt(remainder - 1));
             drawLine();
 
-            continuationIndicator = getContinuationIndicator(scanner);
+            continuation = getContinuation(scanner);
 
-        } while (continuationIndicator == 'S');
+        } while (continuation == 'S');
 
         if (!(cycleWord.equals(SECRET_SPOCK_STRING) && lastPosition == STAR_TREK_NUMBER_OF_EPISODES)) {
             System.out.println("Espero que tenha aproveitado o treino de lógica!");
@@ -57,48 +57,48 @@ public class Cycles {
                 ("* ----------------------------------------------------------- *");
     }
 
-    private static void getAnswerIndicator(Scanner scanner) {
-        printAnswerIndicatorInputMessage();
-        char answerIndicator = scanner.next().charAt(0);
+    private static void getAnswer(Scanner scanner) {
+        printAnswerInputMessage();
+        char answer = scanner.next().charAt(0);
         drawLine();
 
-        while (isInvalidAnswerIndicator(answerIndicator)) {
+        while (isInvalidAnswer(answer)) {
             printInvalidCharacterMessage();
-            printAnswerIndicatorInputMessage();
-            answerIndicator = Character.toUpperCase(scanner.next().charAt(0));
+            printAnswerInputMessage();
+            answer = Character.toUpperCase(scanner.next().charAt(0));
             drawLine();
         }
     }
 
-    private static void printAnswerIndicatorInputMessage() {
+    private static void printAnswerInputMessage() {
         System.out.print("Deseja saber a resposta? [Aperte \"S\", e somente \"S\", para continuar]: ");
     }
 
-    private static boolean isInvalidAnswerIndicator(char answerIndicator) {
-        return (answerIndicator != 'S');
+    private static boolean isInvalidAnswer(char answer) {
+        return (answer != 'S');
     }
 
-    private static char getContinuationIndicator(Scanner scanner) {
-        printContinuationIndicatorInputMessage();
-        char continuationIndicator = Character.toUpperCase(scanner.next().charAt(0));
+    private static char getContinuation(Scanner scanner) {
+        printContinuationInputMessage();
+        char continuation = Character.toUpperCase(scanner.next().charAt(0));
         drawLine();
 
-        while (isInvalidContinuationIndicator(continuationIndicator)) {
+        while (isInvalidContinuation(continuation)) {
             printInvalidCharacterMessage();
-            printContinuationIndicatorInputMessage();
-            continuationIndicator = Character.toUpperCase(scanner.next().charAt(0));
+            printContinuationInputMessage();
+            continuation = Character.toUpperCase(scanner.next().charAt(0));
             drawLine();
         }
 
-        return continuationIndicator;
+        return continuation;
     }
 
-    private static void printContinuationIndicatorInputMessage() {
+    private static void printContinuationInputMessage() {
         System.out.print("Deseja tentar com outra palavra e posição? [S/N]: ");
     }
 
-    private static boolean isInvalidContinuationIndicator(char continuationIndicator) {
-        return (continuationIndicator != 'S' && continuationIndicator != 'N');
+    private static boolean isInvalidContinuation(char continuation) {
+        return (continuation != 'S' && continuation != 'N');
     }
 
     private static void printInvalidCharacterMessage() {
