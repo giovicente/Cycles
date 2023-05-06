@@ -34,8 +34,7 @@ public class Cycles {
             // When the remainder is 0, the letter is in the last position
             if (remainder == 0) remainder = wordLenght;
 
-            System.out.println("A letra da posição " + lastPosition + " da String "
-                    + cycleWord + " é " + cycleWord.charAt(remainder - 1));
+            System.out.println("A letra da posição " + lastPosition + " da String " + cycleWord + " é " + cycleWord.charAt(remainder - 1));
             drawLine();
 
             continuation = getContinuation(scanner);
@@ -53,8 +52,7 @@ public class Cycles {
     }
 
     private static void drawLine() {
-        System.out.println
-                ("* ----------------------------------------------------------- *");
+        System.out.println("* ----------------------------------------------------------- *");
     }
 
     private static void getAnswer(Scanner scanner) {
