@@ -69,7 +69,7 @@ public class Cycles {
     }
 
     private static void printAnswerInputMessage() {
-        System.out.print("Deseja saber a resposta? [Aperte \"S\", e somente \"S\", para continuar]: ");
+        System.out.print("Deseja saber a resposta? [Aperte \"S\", e somente \"S\", seguido de ENTER para continuar]: ");
     }
 
     private static boolean isInvalidAnswer(char answer) {
