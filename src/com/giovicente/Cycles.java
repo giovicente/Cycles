@@ -57,7 +57,7 @@ public class Cycles {
 
     private static void getAnswer(Scanner scanner) {
         printAnswerInputMessage();
-        char answer = scanner.next().charAt(0);
+        char answer = Character.toUpperCase(scanner.next().charAt(0));
         drawLine();
 
         while (isInvalidAnswer(answer)) {
@@ -69,7 +69,7 @@ public class Cycles {
     }
 
     private static void printAnswerInputMessage() {
-        System.out.print("Deseja saber a resposta? [Aperte \"S\", e somente \"S\", para continuar]: ");
+        System.out.print("Deseja saber a resposta? [Aperte \"S\", e somente \"S\", seguido de ENTER para continuar]: ");
     }
 
     private static boolean isInvalidAnswer(char answer) {
@@ -154,13 +154,13 @@ public class Cycles {
         );
 
         System.out.println(
-                        "  _      _             _                                         _   _____                                        \n" +
-                        " | |    (_)           | |                                       | | |  __ \\                                      \n" +
+                "  _      _             _                                                 _   _____                                        \n" +
                         " | |     ___   _____  | |     ___  _ __   __ _    __ _ _ __   __| | | |__) | __ ___  ___ _ __   ___ _ __          \n" +
                         " | |    | \\ \\ / / _ \\ | |    / _ \\| '_ \\ / _` |  / _` | '_ \\ / _` | |  ___/ '__/ _ \\/ __| '_ \\ / _ \\ '__|\n" +
                         " | |____| |\\ V /  __/ | |___| (_) | | | | (_| | | (_| | | | | (_| | | |   | | | (_) \\__ \\ |_) |  __/ |         \n" +
                         " |______|_| \\_/ \\___| |______\\___/|_| |_|\\__, |  \\__,_|_| |_|\\__,_| |_|   |_|  \\___/|___/ .__/ \\___|_|    \n" +
                         "                                          __/ |                                         | |                       \n" +
-                        "                                         |___/                                          |_|                         ");
+                        "                                         |___/                                          |_|                         "
+        );
     }
 }
