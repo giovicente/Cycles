@@ -100,7 +100,7 @@ public class Cycles {
     }
 
     private static void printInvalidCharacterMessage() {
-        System.out.println("Valor inválido. Por favor, digite um valor válido!!!");
+        System.out.println("Valor inválido. Por favor, digite um valor válido!");
         drawLine();
     }
 
