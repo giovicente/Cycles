@@ -57,7 +57,7 @@ public class Cycles {
 
     private static void getAnswer(Scanner scanner) {
         printAnswerInputMessage();
-        char answer = scanner.next().charAt(0);
+        char answer = Character.toUpperCase(scanner.next().charAt(0));
         drawLine();
 
         while (isInvalidAnswer(answer)) {
@@ -161,6 +161,7 @@ public class Cycles {
                         " | |____| |\\ V /  __/ | |___| (_) | | | | (_| | | (_| | | | | (_| | | |   | | | (_) \\__ \\ |_) |  __/ |         \n" +
                         " |______|_| \\_/ \\___| |______\\___/|_| |_|\\__, |  \\__,_|_| |_|\\__,_| |_|   |_|  \\___/|___/ .__/ \\___|_|    \n" +
                         "                                          __/ |                                         | |                       \n" +
-                        "                                         |___/                                          |_|                         ");
+                        "                                         |___/                                          |_|                         "
+        );
     }
 }
