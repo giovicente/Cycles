@@ -52,7 +52,14 @@ public class Cycles {
     }
 
     private static void drawLine() {
-        System.out.println("* ----------------------------------------------------------- *");
+        final int NUMBER_OF_DASHS = 59;
+        int i = 0;
+
+        for (System.out.print("* "); i <= NUMBER_OF_DASHS; i++) {
+            System.out.print("-");
+        }
+
+        System.out.println(" *");
     }
 
     private static void getAnswer(Scanner scanner) {
