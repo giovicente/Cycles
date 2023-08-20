@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 public class Cycles {
 
+    /*
+    * Unicode Characters
+    * https://en.wikipedia.org/wiki/Latin-1_Supplement
+    * */
+
     public static void main(String[] args) {
 
         char continuation;
@@ -14,27 +19,27 @@ public class Cycles {
         int lastPosition;
 
         do {
-            System.out.print("Digite a palavra que formará o ciclo: ");
+            System.out.print("Digite a palavra que formar\u00e1 o ciclo: ");
             scanner = new Scanner(System.in);
             cycleWord = scanner.next().toUpperCase();
             drawLine();
 
-            System.out.print("Digite a posição da última letra: ");
+            System.out.print("Digite a posi\u00e7\u00e3o da \u00faltima letra: ");
             lastPosition = scanner.nextInt();
             drawLine();
 
             getAnswer(scanner);
 
             int wordLenght = cycleWord.length();
-            System.out.println("O tamanho da palavra é: " + wordLenght);
+            System.out.println("O tamanho da palavra \u00e9: " + wordLenght);
 
             int remainder = lastPosition % wordLenght;
-            System.out.println("O resto é igual a " + remainder);
+            System.out.println("O resto \u00e9 igual a " + remainder);
 
             // When the remainder is 0, the letter is in the last position
             if (remainder == 0) remainder = wordLenght;
 
-            System.out.println("A letra da posição " + lastPosition + " da String " + cycleWord + " é " + cycleWord.charAt(remainder - 1));
+            System.out.println("A letra da posi\u00e7\u00e3o " + lastPosition + " da String " + cycleWord + " \u00e9 " + cycleWord.charAt(remainder - 1));
             drawLine();
 
             continuation = getContinuation(scanner);
@@ -42,7 +47,7 @@ public class Cycles {
         } while (continuation == 'S');
 
         if (!(cycleWord.equals(SECRET_SPOCK_STRING) && lastPosition == STAR_TREK_NUMBER_OF_EPISODES)) {
-            System.out.println("Espero que tenha aproveitado o treino de lógica!");
+            System.out.println("Espero que tenha aproveitado o treino de l\u00f3gica!");
             drawLine();
         } else {
             drawSpock();
@@ -99,7 +104,7 @@ public class Cycles {
     }
 
     private static void printContinuationInputMessage() {
-        System.out.print("Deseja tentar com outra palavra e posição? [S/N]: ");
+        System.out.print("Deseja tentar com outra palavra e posi\u00e7\u00e3o? [S/N]: ");
     }
 
     private static boolean isInvalidContinuation(char continuation) {
@@ -107,7 +112,7 @@ public class Cycles {
     }
 
     private static void printInvalidCharacterMessage() {
-        System.out.println("Valor inválido. Por favor, digite um valor válido!");
+        System.out.println("Valor inv\u00e1lido. Por favor, digite um valor v\u00e1lido!");
         drawLine();
     }
 
