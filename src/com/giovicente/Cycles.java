@@ -20,11 +20,17 @@ public class Cycles {
         int lastPosition;
 
         do {
+            // unicode \u00e1 == á
             System.out.print("Digite a palavra que formar\u00e1 o ciclo: ");
             scanner = new Scanner(System.in);
             cycleWord = scanner.next().toUpperCase();
             drawLine();
 
+            /*
+             * unicode \u00e7 == ç
+             * unicode \u00e3 == ã
+             * unicode \u00fa == ú
+             * */
             System.out.print("Digite a posi\u00e7\u00e3o da \u00faltima letra: ");
             lastPosition = scanner.nextInt();
             drawLine();
@@ -32,14 +38,21 @@ public class Cycles {
             getAnswer(scanner);
 
             int wordLenght = cycleWord.length();
+            // unicode \u00e9 == é
             System.out.println("O tamanho da palavra \u00e9: " + wordLenght);
 
             int remainder = lastPosition % wordLenght;
+            // unicode \u00e9 == é
             System.out.println("O resto \u00e9 igual a " + remainder);
 
             // When the remainder is 0, the letter is in the last position
             if (remainder == 0) remainder = wordLenght;
 
+            /*
+            * unicode \u00e7 == ç
+            * unicode \u00e3 == ã
+            * unicode \u00e9 == é
+            * */
             System.out.println("A letra da posi\u00e7\u00e3o " + lastPosition + " da String " + cycleWord + " \u00e9 " + cycleWord.charAt(remainder - 1));
             drawLine();
 
@@ -48,6 +61,7 @@ public class Cycles {
         } while (continuation == 'S');
 
         if (!(cycleWord.equals(SECRET_SPOCK_STRING) && lastPosition == STAR_TREK_NUMBER_OF_EPISODES)) {
+            // unicode \u00f3 == ó
             System.out.println("Espero que tenha aproveitado o treino de l\u00f3gica!");
             drawLine();
         } else {
@@ -105,6 +119,10 @@ public class Cycles {
     }
 
     private static void printContinuationInputMessage() {
+        /*
+         * unicode \u00e7 == ç
+         * unicode \u00e3 == ã
+         * */
         System.out.print("Deseja tentar com outra palavra e posi\u00e7\u00e3o? [S/N]: ");
     }
 
@@ -113,6 +131,7 @@ public class Cycles {
     }
 
     private static void printInvalidCharacterMessage() {
+        // unicode \u00e1 == á
         System.out.println("Valor inv\u00e1lido. Por favor, digite um valor v\u00e1lido!");
         drawLine();
     }
