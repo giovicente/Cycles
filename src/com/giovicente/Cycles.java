@@ -7,6 +7,7 @@ public class Cycles {
     /*
     * Unicode Characters
     * https://en.wikipedia.org/wiki/Latin-1_Supplement
+    *
     * */
 
     public static void main(String[] args) {
